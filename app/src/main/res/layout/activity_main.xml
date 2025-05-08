@@ -8,26 +8,80 @@
     tools:context=".MainActivity">
 
     <ImageView
-        android:id="@+id/imageView2"
+        android:id="@+id/imageView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        app:srcCompat="@drawable/img_1"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/welcometxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="70dp"
+        android:layout_marginBottom="570dp"
+        android:fontFamily="sans-serif-black"
+        android:text="Welcome to the flashcard quiz!"
+        android:textColor="#121212"
+        android:textSize="24sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:srcCompat="@drawable/img" />
+        app:layout_constraintHorizontal_bias="0.995"
+        app:layout_constraintStart_toEndOf="@+id/imageView4"
+        app:layout_constraintTop_toBottomOf="@+id/imageView4"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/descriptiontxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="50dp"
+        android:layout_marginBottom="450dp"
+        android:fontFamily="sans-serif-black"
+        android:text="Time to test your knowledge"
+        android:textColor="#0F0E0E"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.811"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView4"
+        app:layout_constraintVertical_bias="0.513" />
 
     <Button
-        android:id="@+id/button2"
-        android:layout_width="125dp"
-        android:layout_height="72dp"
-        android:text="Button"
-        tools:layout_editor_absoluteX="143dp"
-        tools:layout_editor_absoluteY="480dp" />
+        android:id="@+id/Startbtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="22dp"
+        android:layout_marginEnd="400dp"
+        android:layout_marginBottom="15dp"
+        android:backgroundTint="#FDF4F4"
+        android:fontFamily="sans-serif-black"
+        android:text="Start"
+        android:textColor="#141414"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/Exitbtn1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageView4"
+        app:layout_constraintTop_toBottomOf="@+id/descriptiontxt" />
 
     <Button
-        android:id="@+id/button"
-        android:layout_width="125dp"
-        android:layout_height="72dp"
-        android:text="Button"
-        tools:layout_editor_absoluteX="143dp"
-        tools:layout_editor_absoluteY="368dp" />
+        android:id="@+id/Exitbtn1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="400dp"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="#FDF4F4"
+        android:fontFamily="sans-serif-black"
+        android:text="Exit"
+        android:textColor="#1D1C1C"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/imageView4"
+        app:layout_constraintHorizontal_bias="0.475"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Startbtn" />
 </androidx.constraintlayout.widget.ConstraintLayout>
