@@ -1,6 +1,7 @@
 package com.example.historyquickquiz
 
 import android.annotation.SuppressLint
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
@@ -9,9 +10,9 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import kotlin.system.exitProcess
+//Author: Leah Naiker
 
-//references
-//Background image:https://www.canva.com/design/DAGmHQ65hSA/RIzkBF0iKypzdDAVgWKwKg/edit
+//Background image:https://www.canva.com/design/DAGnPXL6UcY/PE_FIfC3pd2VxH9SfXQdmQ/edit?ui=eyJBIjp7fX0
 
 
 class MainActivity : AppCompatActivity() {
@@ -21,13 +22,15 @@ class MainActivity : AppCompatActivity() {
         enableEdgeToEdge()
         setContentView(R.layout.activity_main)
 
-        val welcometxt = findViewById<TextView>(R.id.welcometxt)
-        val descriptiontxt = findViewById<TextView>(R.id.descriptiontxt)
+        val Welcomemsg = findViewById<TextView>(R.id.Welcomemsg)
+        val descriptionmsg = findViewById<TextView>(R.id.descriptionmsg)
         val Startbtn = findViewById<Button>(R.id.Startbtn)
         val Exitbtn1 = findViewById<Button>(R.id.Exitbtn1)
 
         //Start button used to start the quiz
         Startbtn.setOnClickListener {
+            val intent = Intent(this, Quiz::class.java)
+            startActivity(intent)
 
 
             //Exit button used to exit the quiz
