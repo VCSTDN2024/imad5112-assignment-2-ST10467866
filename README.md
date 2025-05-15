@@ -44,19 +44,19 @@ History QuickQuiz is a mobile application designed for History students to quick
 - Dark mode support
 
 ## How to use: 
-**1.** Launch the app.
-**2.** Tap the "Start" button to begin.
-**3.** Answer each True/False question by tapping the respective button.
-**4.** View your score on the score screen by tapping on the "Next" button.
-**5.** Tap the "Review" button to review all the questions and their answers.
-**6.** Tap the "Restart" button if you wish to do the quiz again.
+1. Launch the app.
+2. Tap the "Start" button to begin.
+3. Answer each True/False question by tapping the respective button.
+4. View your score on the score screen by tapping on the "Next" button.
+5. Tap the "Review" button to review all the questions and their answers.
+6. Tap the "Restart" button if you wish to do the quiz again.
 
 ## Screenshots: 
-**1. Home screen**
-**2. Quiz screen**
-**3. Score screen**
-**4. Review screen**
-**5. Invalid input**
-**6. Valid input**
-**7. No input**
+1. **Home screen**
+2. **Quiz screen**
+3. **Score screen**
+4. **Review screen**
+5. **Invalid input**
+6. **Valid input**
+7. **No input**
 
