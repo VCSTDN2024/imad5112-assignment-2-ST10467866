@@ -14,7 +14,6 @@ import kotlin.system.exitProcess
 
 //Background image:https://www.canva.com/design/DAGnPXL6UcY/PE_FIfC3pd2VxH9SfXQdmQ/edit?ui=eyJBIjp7fX0
 
-
 class MainActivity : AppCompatActivity() {
     @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -22,33 +21,27 @@ class MainActivity : AppCompatActivity() {
         enableEdgeToEdge()
         setContentView(R.layout.activity_main)
 
-        val Welcomemsg = findViewById<TextView>(R.id.Welcomemsg)
+        val Welcomemsg= findViewById<TextView>(R.id.Welcomemsg)
         val descriptionmsg = findViewById<TextView>(R.id.descriptionmsg)
         val Startbtn = findViewById<Button>(R.id.Startbtn)
-        val Exitbtn1 = findViewById<Button>(R.id.Exitbtn1)
+        val exitbtn1 = findViewById<Button>(R.id.Exitbtn1)
 
-        //Start button used to start the quiz
+        // Start button used to start the quiz
         Startbtn.setOnClickListener {
             val intent = Intent(this, Quiz::class.java)
             startActivity(intent)
+        }
 
+        // Exit button used to exit the quiz
+        exitbtn1.setOnClickListener {
+            finishAffinity()
+            exitProcess(0)
+        }
 
-            //Exit button used to exit the quiz
-            Exitbtn1.setOnClickListener {
-                finishAffinity()
-                exitProcess(0)
-            }
-
-
-
-
-
-            ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
-                val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
-                v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
-                insets
-            }
-
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
+            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
+            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
+            insets
         }
     }
 }

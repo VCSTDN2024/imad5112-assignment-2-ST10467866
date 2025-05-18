@@ -12,8 +12,8 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.historyquickquiz.Quiz.Companion.questions
 
-class Quiz :
-    AppCompatActivity() {
+
+class Quiz :AppCompatActivity() {
 
     private lateinit var questiontxt: TextView
     private lateinit var truebtn: Button
@@ -25,19 +25,13 @@ class Quiz :
     companion object {
         val questions = arrayOf(
             "Ketchup was once sold as medicine",
-            "The sinking of the Titanic was not predicted",
-            "The leaning tower of Pisa never stood up straight",
-            "The statue of Liberty used to be a lighthouse",
             "The shortest war in history lasted 38 min",
             "Cars were invented in the United States",
             "The great wall of China is not the longest man-made structure in the world",
-            "President Abraham Lincon's top hat had a purpose",
-            "The empire state building has its own zip code ",
-            "The last letter to be added to the alphabet was actually X"
+            "President Abraham Lincon's top hat had a purpose"
         )
-        val answers = booleanArrayOf(true, false, true, true, true, false, false, true, true, false)
-        // You might want to add logic here for randomizing or picking 5 questions
-        // For now, it's just a static list.
+        val answers = booleanArrayOf(true, true, false, false, true)
+
     }
 
     private var currentQuestionIndex = 0
@@ -47,12 +41,7 @@ class Quiz :
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        // IMPORTANT: Make sure R.layout.activity_score is the correct layout
-        // for THIS activity. If this is the main quiz activity, it should likely be
-        // R.layout.activity_main (or whatever your quiz layout is named).
-        // If R.layout.activity_score is for displaying the final score,
-        // then the findViewById calls might fail if those IDs don't exist in that layout.
-        setContentView(R.layout.activity_score) // Or R.layout.activity_main
+        setContentView(R.layout.activity_quiz)
 
         // Initialize UI elements
         questiontxt = findViewById(R.id.questiontxt)
@@ -71,7 +60,7 @@ class Quiz :
         // Next button
         nextbtn.setOnClickListener {
             currentQuestionIndex++
-            // Access questions and answers via the companion object
+
             if (currentQuestionIndex < questions.size) {
                 displayQuestion()
                 feedbacktxt.text = ""
@@ -83,7 +72,7 @@ class Quiz :
                 // Add score to represent what score a user got
                 intent.putExtra("score", score)
                 startActivity(intent)
-                finish() // Finish this activity so the user can't go back to it
+                finish()
             }
             nextbtn.isEnabled = false // Disable next button until an answer is chosen
         }
@@ -117,4 +106,8 @@ class Quiz :
         falsebtn.isEnabled = false
         nextbtn.isEnabled = true // Enable next button to proceed
     }
+}
+
+class QuestionItem {
+
 }
