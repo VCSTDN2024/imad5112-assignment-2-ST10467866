@@ -3,11 +3,11 @@
 ## Developer:
 - **Name & Surname:** Leah Naiker
 - **Student number:** ST10467866 Gr.1
-- **Github link:**
-- **Youtube link:**
+- **Github link:** https://github.com/VCSTDN2024/imad5112-assignment-2-ST10467866.git
+- **Youtube link:** https://youtu.be/vvE1RUHP4ds
 
 ## About the project:
-History QuickQuiz is a mobile application designed for History students to quickly test their knowledge through a simple and interactive True/False quiz format. With an intuitive user interface and seamless navigation between four screens, this app is ideal for quick revision sessions
+The **History QuickQuiz** is a mobile application designed for History students to quickly test their knowledge through a simple and interactive True/False quiz format. With an intuitive user interface and seamless navigation between four screens, this app is ideal for quick revision sessions
 
 ## Features:
 - **True/False Quiz:** Test your knowledge on various historical facts.
